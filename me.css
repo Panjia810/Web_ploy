@@ -1,0 +1,183 @@
+/* ===== พื้นฐาน ===== */
+body {
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+}
+
+/* ===== หน้า Me ===== */
+.me-page {
+    margin: 0;
+    font-family: "Comic Sans MS", sans-serif;
+    background: url('พื้นหลัง.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-position: 50% 70%;
+    overflow-x: hidden;
+}
+
+/* ===== HERO ===== */
+.me-hero {
+    position: relative;
+    height: 38vh;                 /* ⭐ ไม่ทับปุ่มล่าง */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    z-index: 1;
+}
+
+/* ชื่อเล่น */
+.nickname {
+    max-width: 45%;
+}
+
+.nickname h1 {
+    font-size: 56px;
+    font-weight: 900;
+    color: #000;
+    text-shadow: 4px 4px 0 #f7b75f;
+}
+
+.nickname p {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    text-shadow: 2px 2px 0 #f7b75f;
+}
+
+/* ===== รูปหน้า (โฟโต้การ์ด) ===== */
+.profile-pic img {
+    width: 360px;                 /* ⭐ ใหญ่ แต่ไม่พัง */
+    height: 480px;
+    object-fit: cover;
+    border-radius: 20px;          /* ⭐ การ์ดดารา */
+    border: 4px solid #000;
+    background: #fff;
+}
+
+/* ===== SOCIAL BUTTONS ===== */
+.social-links {
+    position: absolute;
+    bottom: 280px;   /* ⭐ เลื่อนขึ้นอีก ~10 ซม. */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 25px;
+}
+
+
+.social-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.25s ease;
+}
+
+.social-btn img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.social-btn:hover {
+    transform: scale(1.15) translateY(-6px);
+}
+
+/* ===== แถบปุ่มล่าง (สำคัญมาก) ===== */
+.button-container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 60%;
+    max-width: 420px;
+
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    align-items: flex-end;
+
+    padding: 14px 0;
+    z-index: 9999;                /* ⭐ กันทุกอย่าง */
+}
+
+/* ===== ปุ่มทั้งหมด ===== */
+.btn-item {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== ปุ่มวงกลม ===== */
+.circle-btn {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 2px solid #000;
+    background-color: rgba(0,0,0,0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        border 0.25s ease;
+}
+
+.circle-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle-btn:hover {
+    transform: scale(1.15) translateY(-5px);
+    background-color: rgba(255,255,255,0.85);
+    border: 3px solid #000;
+}
+
+/* ===== ข้อความใต้ปุ่ม ===== */
+.btn-text {
+    margin-top: 6px;
+    font-size: 14px;
+    color: yellow;
+    text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+/* ===== ปุ่ม Me ===== */
+.me-only {
+    margin: 0 18px;
+}
+
+/* รูป Me */
+.me-img {
+    width: 135px;
+    height: auto;
+    position: relative;
+    top: -8px;                    /* ⭐ ลอยนิดเดียว */
+    transition: transform 0.25s ease;
+}
+
+.me-img:hover {
+    transform: scale(1.1);
+}

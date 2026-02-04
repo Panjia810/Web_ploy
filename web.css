@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url("1home.png");
+    background-size: cover;
+    background-position: center -90px;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+}
+
+/* เนื้อหา */
+.content {
+    color: #ffffff;
+    text-align: center;
+    padding-top: 100px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* กล่องรวมปุ่ม */
+.button-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 30px;
+}
+
+/* แต่ละปุ่ม */
+.btn-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ปุ่มวงกลม */
+.circle-btn {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 2px solid #000;          /* ⭐ กรอบสีดำ */
+    background-color: rgba(0,0,0,0.5);
+
+    display: flex;                   /* ⭐ สำคัญ */
+    align-items: center;
+    justify-content: center;
+}
+
+/* ⭐ รูปในวงกลม (ตัวนี้แหละที่ทำให้รูปกลับมา) */
+.circle-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ข้อความใต้ปุ่ม */
+.btn-text {
+    margin-top: 8px;
+    font-size: 14px;
+    color: yellow;
+    text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}

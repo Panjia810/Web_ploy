@@ -1,0 +1,111 @@
+/* ===== พื้นฐาน ===== */
+body {
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+}
+
+/* ===== หน้า Me ===== */
+.me-page {
+    margin: 0;
+    font-family: "Comic Sans MS", sans-serif;
+    background: url('พื้นหลัง.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-position: 50% 70%;
+    overflow-x: hidden;
+}
+
+/* ===== แถบปุ่มล่าง ===== */
+.button-container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 60%;
+    max-width: 420px;
+
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    align-items: flex-end;   /* ⭐ ทุกปุ่มชิดล่างเท่ากัน */
+
+    padding: 14px 0;
+    z-index: 999;
+}
+
+/* ===== ปุ่มทั้งหมด ===== */
+.btn-item {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== ปุ่มวงกลม (เพื่อน ๆ) ===== */
+.circle-btn {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 2px solid #000;
+    background-color: rgba(0,0,0,0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        border 0.25s ease;
+}
+
+.circle-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle-btn:hover {
+    transform: scale(1.15) translateY(-5px);
+    background-color: rgba(255,255,255,0.85);
+    border: 3px solid #000;
+}
+
+/* ===== ข้อความใต้ปุ่ม ===== */
+.btn-text {
+    margin-top: 6px;
+    font-size: 14px;
+    color: yellow;
+    text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+/* ===== ปุ่ม Me ===== */
+.me-only {
+    margin: 0 28px;
+    margin-bottom: -35px;   /* ⭐ ตัวแก้หลัก: ดันน้องลง ไม่เหยียบหัวเพื่อน */
+}
+
+/* ===== รูป Me (อ้วนขึ้นแล้ว) ===== */
+.me-img {
+    width: 195px;           /* ⭐ อ้วนขึ้น */
+    height: auto;
+
+    position: relative;
+    top: 0;                 /* ⭐ ไม่ต้องขยับด้วย top แล้ว */
+
+    transition: transform 0.25s ease;
+}
+
+/* ===== hover น้อง Me ===== */
+.me-img:hover {
+    transform: scale(1.1);
+}
