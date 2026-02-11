@@ -17,7 +17,7 @@ body {
 /* ===== HERO ===== */
 .me-hero {
     position: relative;
-    height: 38vh;                 /* ⭐ ไม่ทับปุ่มล่าง */
+    height: 38vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -33,24 +33,24 @@ body {
 .nickname h1 {
     font-size: 56px;
     font-weight: 900;
-    color: #000;
-    text-shadow: 4px 4px 0 #f7b75f;
+    color: #ffffff;
+    text-shadow: 4px 4px 0 #5abfee;
 }
 
 .nickname p {
     margin-top: 10px;
     font-size: 24px;
     font-weight: bold;
-    color: #000;
-    text-shadow: 2px 2px 0 #f7b75f;
+    color: #ffffff;
+    text-shadow: 2px 2px 0 #78c2df;
 }
 
-/* ===== รูปหน้า (โฟโต้การ์ด) ===== */
+/* ===== รูปหน้า ===== */
 .profile-pic img {
-    width: 360px;                 /* ⭐ ใหญ่ แต่ไม่พัง */
+    width: 360px;
     height: 480px;
     object-fit: cover;
-    border-radius: 20px;          /* ⭐ การ์ดดารา */
+    border-radius: 20px;
     border: 4px solid #000;
     background: #fff;
 }
@@ -58,18 +58,20 @@ body {
 /* ===== SOCIAL BUTTONS ===== */
 .social-links {
     position: absolute;
-    bottom: 280px;   /* ⭐ เลื่อนขึ้นอีก ~10 ซม. */
+    bottom: 280px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 25px;
 }
 
-
+/* ปุ่มวงกลมไอคอน (ครอปแบบ IG) */
 .social-btn {
     width: 70px;
     height: 70px;
     border-radius: 50%;
+    overflow: hidden;              /* ⭐ ตัดขอบแบบ IG */
+
     background: #fff;
     border: 2px solid #000;
 
@@ -77,20 +79,24 @@ body {
     align-items: center;
     justify-content: center;
 
-    transition: transform 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* ครอปรูปให้เต็มวง */
 .social-btn img {
-    width: 70%;
-    height: 70%;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;             /* ⭐ สูตร IG */
+    object-position: center;
 }
 
 .social-btn:hover {
     transform: scale(1.15) translateY(-6px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+    cursor: pointer;
 }
 
-/* ===== แถบปุ่มล่าง (สำคัญมาก) ===== */
+/* ===== แถบปุ่มล่าง ===== */
 .button-container {
     position: fixed;
     bottom: 0;
@@ -106,7 +112,7 @@ body {
     align-items: flex-end;
 
     padding: 14px 0;
-    z-index: 9999;                /* ⭐ กันทุกอย่าง */
+    z-index: 9999;
 }
 
 /* ===== ปุ่มทั้งหมด ===== */
@@ -120,7 +126,7 @@ body {
     align-items: center;
 }
 
-/* ===== ปุ่มวงกลม ===== */
+/* ===== ปุ่มวงกลมด้านล่าง ===== */
 .circle-btn {
     width: 90px;
     height: 90px;
@@ -134,10 +140,9 @@ body {
     align-items: center;
     justify-content: center;
 
-    transition:
-        transform 0.25s ease,
-        background-color 0.25s ease,
-        border 0.25s ease;
+    transition: transform 0.25s ease,
+                background-color 0.25s ease,
+                border 0.25s ease;
 }
 
 .circle-btn img {
@@ -169,15 +174,68 @@ body {
     margin: 0 18px;
 }
 
-/* รูป Me */
 .me-img {
     width: 135px;
     height: auto;
     position: relative;
-    top: -8px;                    /* ⭐ ลอยนิดเดียว */
+    top: -8px;
     transition: transform 0.25s ease;
 }
 
 .me-img:hover {
     transform: scale(1.1);
+}
+
+/* ===== LINE POPUP ===== */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.popup-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    animation: popupZoom 0.3s ease;
+}
+
+.popup-box img {
+    width: 200px;
+    margin: 15px 0;
+}
+
+.popup-box h2 {
+    margin: 0;
+}
+
+.popup-box p {
+    font-size: 14px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+@keyframes popupZoom {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }

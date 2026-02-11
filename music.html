@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Music</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="music.css">
+</head>
+
+<body class="me-page">
+
+<div class="content">
+  <h1>Music 🎧</h1>
+  <p>เพลงที่กำลังอินช่วงนี้</p>
+</div>
+
+<!-- เพลงหลัก -->
+<div class="main-player">
+  <iframe id="mainSpotify"
+    src="https://open.spotify.com/embed/track/7zmF5SzyE0HfbkF7ODflp8"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+  </iframe>
+</div>
+
+<!-- เพลงเล็ก -->
+<div class="song-section">
+
+  <!-- หน้า 1 -->
+  <div class="song-page active">
+    <div class="song-wrapper" onclick="changeMain('0wFU2pYHZi45Ws1VD6aSJX')">
+      <iframe src="https://open.spotify.com/embed/track/0wFU2pYHZi45Ws1VD6aSJX"></iframe>
+    </div>
+    <div class="song-wrapper" onclick="changeMain('1aKvZDoLGkNMxoRYgkckZG')">
+      <iframe src="https://open.spotify.com/embed/track/1aKvZDoLGkNMxoRYgkckZG"></iframe>
+    </div>
+    <div class="song-wrapper" onclick="changeMain('4p0uVFAXKUISu8yp9gNtWE')">
+      <iframe src="https://open.spotify.com/embed/track/4p0uVFAXKUISu8yp9gNtWE"></iframe>
+    </div>
+    <div class="song-wrapper" onclick="changeMain('0KLg44cKiJb8SVmIwsjL8u')">
+      <iframe src="https://open.spotify.com/embed/track/0KLg44cKiJb8SVmIwsjL8u"></iframe>
+    </div>
+  </div>
+
+  <!-- หน้า 2 -->
+  <div class="song-page">
+    <div class="song-wrapper" onclick="changeMain('1cF0TrKl0PgsijLsfsNsgF')">
+      <iframe src="https://open.spotify.com/embed/track/1cF0TrKl0PgsijLsfsNsgF"></iframe>
+    </div>
+    <div class="song-wrapper" onclick="changeMain('0xM8GcOTYlxy9ERBV8Ksx1')">
+      <iframe src="https://open.spotify.com/embed/track/0xM8GcOTYlxy9ERBV8Ksx1"></iframe>
+    </div>
+    <div class="song-wrapper" onclick="changeMain('2pNtlK4DkAxwYpX0Sp2sgn')">
+      <iframe src="https://open.spotify.com/embed/track/2pNtlK4DkAxwYpX0Sp2sgn"></iframe>
+    </div>
+    <div class="song-wrapper" onclick="changeMain('6xRiL9BVkWfZryQJmdHTmv')">
+      <iframe src="https://open.spotify.com/embed/track/6xRiL9BVkWfZryQJmdHTmv"></iframe>
+    </div>
+  </div>
+
+  <!-- หน้า 3 -->
+  <div class="song-page">
+    <div class="song-wrapper" onclick="changeMain('5mLg7orOZQPCuCw7vJtrlN')">
+      <iframe src="https://open.spotify.com/embed/track/5mLg7orOZQPCuCw7vJtrlN"></iframe>
+    </div>
+    <div class="song-wrapper" onclick="changeMain('4fFPIaJuLyWfu2LouUXPjw')">
+      <iframe src="https://open.spotify.com/embed/track/4fFPIaJuLyWfu2LouUXPjw"></iframe>
+    </div>
+    <div class="song-wrapper" onclick="changeMain('2VNpT9fRk1kyksT0S4coZR')">
+      <iframe src="https://open.spotify.com/embed/track/2VNpT9fRk1kyksT0S4coZR"></iframe>
+    </div>
+    <div class="song-wrapper" onclick="changeMain('4pi0Elz7B7cLfw37J3bYm9')">
+      <iframe src="https://open.spotify.com/embed/track/4pi0Elz7B7cLfw37J3bYm9"></iframe>
+    </div>
+  </div>
+
+  <!-- หน้า 4 -->
+  <div class="song-page">
+    <div class="song-wrapper" onclick="changeMain('60jFaQV7Z4boGC4ob5B5c6')">
+      <iframe src="https://open.spotify.com/embed/track/60jFaQV7Z4boGC4ob5B5c6"></iframe>
+    </div>
+    <div class="song-wrapper" onclick="changeMain('1utDFK1ARQcuZSwapf3cfb')">
+      <iframe src="https://open.spotify.com/embed/track/1utDFK1ARQcuZSwapf3cfb"></iframe>
+    </div>
+    <div class="song-wrapper" onclick="changeMain('26OVhEqFDQH0Ij77QtmGP9')">
+      <iframe src="https://open.spotify.com/embed/track/26OVhEqFDQH0Ij77QtmGP9"></iframe>
+    </div>
+    <div class="song-wrapper" onclick="changeMain('2qQpFbqqkLOGySgNK8wBXt')">
+      <iframe src="https://open.spotify.com/embed/track/2qQpFbqqkLOGySgNK8wBXt"></iframe>
+    </div>
+  </div>
+
+</div>
+
+<!-- หัวใจเปลี่ยนหน้า -->
+<div class="page-controls">
+  <span class="page-heart active" onclick="goPage(0)">💙</span>
+  <span class="page-heart" onclick="goPage(1)">💙</span>
+  <span class="page-heart" onclick="goPage(2)">💙</span>
+  <span class="page-heart" onclick="goPage(3)">💙</span>
+</div>
+
+<!-- เมนูล่าง -->
+<div class="button-container">
+  <a href="me.html" class="btn-item">
+    <div class="circle-btn"><img src="me.jpg"></div>
+    <div class="btn-text">Me</div>
+  </a>
+  <a href="movie.html" class="btn-item">
+    <div class="circle-btn"><img src="movie.jpg"></div>
+    <div class="btn-text">Movie</div>
+  </a>
+  <a href="music.html" class="btn-item me-only">
+    <img src="fav.gojo.png" class="me-img">
+  </a>
+  <a href="novel.html" class="btn-item">
+    <div class="circle-btn"><img src="novel.jpg"></div>
+    <div class="btn-text">Novel</div>
+  </a>
+  <a href="anime.html" class="btn-item">
+    <div class="circle-btn"><img src="anime.jpg"></div>
+    <div class="btn-text">Anime</div>
+  </a>
+</div>
+
+<script>
+function changeMain(id) {
+  document.getElementById("mainSpotify").src =
+    "https://open.spotify.com/embed/track/" + id;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function goPage(index) {
+  const pages = document.querySelectorAll(".song-page");
+  const hearts = document.querySelectorAll(".page-heart");
+
+  pages.forEach(p => p.classList.remove("active"));
+  hearts.forEach(h => h.classList.remove("active"));
+
+  pages[index].classList.add("active");
+  hearts[index].classList.add("active");
+}
+</script>
+
+</body>
+</html>

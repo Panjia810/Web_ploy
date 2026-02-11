@@ -9,79 +9,107 @@
 <body class="me-page">
 
     <!-- ===== HERO SECTION ===== -->
-<div class="me-hero">
+    <div class="me-hero">
 
-    <!-- ชื่อเล่น -->
-    <div class="nickname">
-        <h1>ชื่อเล่นของคุณ</h1>
-        <p>ประวัติส่วนตัว</p>
+        <!-- ชื่อเล่น -->
+        <div class="nickname">
+            <h1>Panjia</h1>
+            <h2>น.ส.ปัญญาพร เหรียญทอง</h2>
+            <h2>Panyaporn Rienthong</h2>
+            <p>ประวัติส่วนตัว</p>
+            <h3>อาโลฮาาาา เราชื่อพลอย หรือเรียกว่าพันเจียก็ได้</h3>
+            <h4>สามารถทักมาคุยส่วนตัวได้นะ แต่ไม่ตอบ บอกเฉยๆ</h4>
+        </div>
+
+        <!-- รูปหน้า -->
+        <div class="profile-pic">
+            <img src="jia.jpg" alt="my face">
+        </div>
+
     </div>
 
-    <!-- รูปหน้า -->
-    <div class="profile-pic">
-        <img src="face.png" alt="my face">
+    <!-- ===== SOCIAL BUTTONS ===== -->
+    <div class="social-links">
+
+        <!-- LINE (เปิด popup) -->
+        <a href="javascript:void(0)" class="social-btn" onclick="openLinePopup()">
+            <img src="line.jpg" alt="LINE">
+        </a>
+
+        <!-- Facebook (ลิงก์จริง + ครอปวงกลม) -->
+        <a href="https://www.facebook.com/share/1HdJmhKEry/"
+           class="social-btn"
+           target="_blank">
+            <img src="face.jpg" alt="Facebook">
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/ttunawithmayo/"
+           class="social-btn"
+           target="_blank">
+            <img src="ig.jpg" alt="Instagram">
+        </a>
+
     </div>
 
-</div>
-
-<!-- ===== SOCIAL BUTTONS ===== -->
-<div class="social-links">
-
-    <a href="#" class="social-btn">
-        <img src="line.png" alt="LINE">
-    </a>
-
-    <a href="#" class="social-btn">
-        <img src="facebook.png" alt="Facebook">
-    </a>
-
- <a href="https://www.instagram.com/ttunawithmayo?igsh=MXFsdXc0bGdxY3k3Ng==/ymir/" 
-   class="social-btn"
-   target="_blank">
-    <img src="ig.jpg" alt="Instagram">
-</a>
-
-
-</div>
-
-    <!-- แถบปุ่มล่าง -->
+    <!-- ===== แถบปุ่มล่าง ===== -->
     <div class="button-container">
 
         <!-- ปุ่ม Me -->
         <a href="me.html" class="btn-item me-only">
-            <img src="per.png" class="me-img" alt="">
+            <img src="per.png" class="me-img" alt="Me">
         </a>
 
-        <!-- ปุ่มอื่น ๆ -->
         <a href="movie.html" class="btn-item">
             <div class="circle-btn">
-                <img src="movie.jpg" alt="">
+                <img src="movie.jpg" alt="Movie">
             </div>
             <div class="btn-text">Movie</div>
         </a>
 
         <a href="music.html" class="btn-item">
             <div class="circle-btn">
-                <img src="fav.music.jpg" alt="">
+                <img src="fav.music.jpg" alt="Music">
             </div>
             <div class="btn-text">Music</div>
         </a>
 
         <a href="novel.html" class="btn-item">
             <div class="circle-btn">
-                <img src="novel.jpg" alt="">
+                <img src="novel.jpg" alt="Novel">
             </div>
             <div class="btn-text">Novel</div>
         </a>
 
         <a href="anime.html" class="btn-item">
             <div class="circle-btn">
-                <img src="anime.jpg" alt="">
+                <img src="anime.jpg" alt="Anime">
             </div>
             <div class="btn-text">Anime</div>
         </a>
 
     </div>
+
+    <!-- ===== LINE POPUP ===== -->
+    <div id="linePopup" class="popup-overlay" onclick="closeLinePopup()">
+        <div class="popup-box" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeLinePopup()">✕</span>
+            <h2>แอด LINE</h2>
+            <img src="line-qr.jpg" alt="LINE QR Code">
+            <p>สแกน QR Code เพื่อเพิ่มเพื่อน</p>
+        </div>
+    </div>
+
+    <!-- ===== JavaScript ===== -->
+    <script>
+        function openLinePopup() {
+            document.getElementById("linePopup").style.display = "flex";
+        }
+
+        function closeLinePopup() {
+            document.getElementById("linePopup").style.display = "none";
+        }
+    </script>
 
 </body>
 </html>

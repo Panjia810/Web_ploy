@@ -1,0 +1,187 @@
+/* ===== พื้นหลัง ===== */
+body {
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+    background: url('พื้นหลัง.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.page-title {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 6px black;
+    margin-top: 20px;
+}
+
+/* ===== MAIN MENU ===== */
+.button-container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    max-width: 420px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    align-items: flex-end;
+    padding: 14px 0;
+    z-index: 999;
+}
+
+.btn-item {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle-btn {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #301f1f;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s;
+}
+
+.circle-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle-btn:hover {
+    transform: scale(1.15) translateY(-5px);
+}
+
+.btn-text {
+    margin-top: 6px;
+    font-size: 14px;
+    color: rgb(226, 226, 50);
+    text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+.anime-only {
+    margin-bottom: -35px; /* ถ้าอยากให้เด้งขึ้นเหมือนตัวเอก */
+}
+
+.anime-img {
+    width: 190px;
+    transition: 0.25s;
+}
+
+.video-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.video-box iframe {
+  width: 25%;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  transition: 0.3s;
+}
+
+.video-box iframe:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 40px rgba(255,100,200,0.8);
+}
+.anime-links {
+  margin: 40px auto;
+  width: 70%;
+  text-align: center;
+}
+
+.anime-links h2 {
+  color: #ffb7e3;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.anime-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.anime-links li {
+  margin: 12px 0;
+}
+
+.anime-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 12px;
+  background: rgba(255, 183, 227, 0.15);
+  transition: 0.3s;
+}
+
+.anime-links a:hover {
+  background: #ffb7e3;
+  color: #222;
+  transform: scale(1.05);
+}
+
+.anime-page {
+  margin-top: 30px;
+}
+
+/* จัดยูทูปให้อยู่กลาง */
+.video-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* กล่อง 2 คอลัมน์ */
+.anime-list-2col {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 200px; /* เผื่อเมนูล่าง */
+}
+
+/* แต่ละฝั่ง */
+.anime-col {
+  width: 260px;
+  color: rgb(0, 0, 0);
+}
+
+.anime-col h3 {
+  text-align: center;
+  color: #ffb7e3;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px black;
+}
+
+.anime-col a {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: rgb(29, 14, 14);
+  background: rgba(255,255,255,0.15);
+  transition: 0.25s;
+}
+
+.anime-col a:hover {
+  background: #ffb7e3;
+  color: #222;
+  transform: scale(1.05);
+}
